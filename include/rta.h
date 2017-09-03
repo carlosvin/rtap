@@ -1,4 +1,5 @@
 #include <cstdint>
+#include "protocol.pb.h"
 
 namespace rta {
 
@@ -9,4 +10,10 @@ namespace rta {
         Message();
         virtual ~Message() = default;
     };
+
+    bool test() 
+    {
+        Uuid uuid;
+        return true;
+    }
 };

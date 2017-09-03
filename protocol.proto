@@ -1,7 +1,15 @@
 
+syntax = "proto3";
 
-message Message {
-    required string query = 1;
-    optional int32 page_number = 2;
-    optional int32 result_per_page = 3;
+package rta;
+
+message Header {
+    Uuid device_id = 2;
+    string from_ip = 3;
+}
+
+// A 128-bit id, transferred as two 64-bit longs
+message Uuid {
+    fixed64 least_significant_bits = 2;
+    fixed64 most_significant_bits = 3;
 }
